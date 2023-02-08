@@ -5,7 +5,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-
+import Logo from "../public/logo.jpeg";
 export const Header = () => {
   return (
     <Popover className="relative bg-white">
@@ -15,8 +15,8 @@ export const Header = () => {
             <Link href="/">
               <span className="sr-only">Your Company</span>
               <Image
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-8 w-auto sm:h-14"
+                src={Logo}
                 alt=""
                 width={100}
                 height={100}
@@ -98,7 +98,7 @@ export const Header = () => {
                 <div>
                   <Image
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    src={Logo}
                     alt="Your Company"
                     width={32}
                     height={32}
