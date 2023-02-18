@@ -1,5 +1,11 @@
+import { Table } from "./Table";
+
 const Discipline = () => {
-  return <h1>Disciplinas</h1>;
+  return (
+    <div className="max-w-7xl mx-auto">
+      <Table />
+    </div>
+  );
 };
 
 export default Discipline;

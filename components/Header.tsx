@@ -6,6 +6,14 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/logo.jpeg";
+
+const navigation = [
+  { name: "Início", href: "/" },
+  { name: "Questões", href: "/questions" },
+  { name: "Materiais didático", href: "/courseware" },
+  { name: "Disciplina", href: "/discipline" },
+];
+
 export const Header = () => {
   return (
     <Popover className="relative bg-white">
@@ -30,37 +38,17 @@ export const Header = () => {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Link
-              href="/"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Início
-            </Link>
-            <Link
-              href="/startGuide"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Guia de início
-            </Link>
-
-            <Link
-              href="/news"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Notícias
-            </Link>
-            <Link
-              href="/exams"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Exames
-            </Link>
-            <Link
-              href="/discipline"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Disciplina
-            </Link>
+            {navigation.map((value, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={value.href}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                >
+                  {value.name}
+                </Link>
+              );
+            })}
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <Link
@@ -114,37 +102,17 @@ export const Header = () => {
             </div>
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <Link
-                  href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Início
-                </Link>
-
-                <Link
-                  href="/startGuide"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Guia de início
-                </Link>
-                <Link
-                  href="/news"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Notícias
-                </Link>
-                <Link
-                  href="/exams"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Exames
-                </Link>
-                <Link
-                  href="/discipline"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Disciplina
-                </Link>
+                {navigation.map((value, index) => {
+                  return (
+                    <Link
+                      key={index}
+                      href={value.href}
+                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    >
+                      {value.name}
+                    </Link>
+                  );
+                })}
               </div>
               <div>
                 <Link

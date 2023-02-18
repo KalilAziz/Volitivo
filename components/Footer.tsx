@@ -1,9 +1,10 @@
+import Link from "next/link";
+
 const navigation = {
   main: [
     { name: "Inicio", href: "/" },
-    { name: "Guia de início", href: "/startGuide" },
-    { name: "Notícias", href: "/news" },
-    { name: "Exames", href: "/exams" },
+    { name: "Questões", href: "/questions" },
+    { name: "Materiais didático", href: "/courseware" },
     { name: "Disciplinas", href: "/discipline" },
   ],
   social: [
@@ -81,12 +82,12 @@ export const Footer = () => {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
-              <a
+              <Link
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 {item.name}
-              </a>
+              </Link>
             </div>
           ))}
         </nav>
