@@ -1,4 +1,4 @@
-import SignOut from "@/components/sign-out";
+import SignOut from "@/app/(dashboard)/_components/sign-out";
 import { unstable_getServerSession } from "next-auth";
 
 const Home = async () => {

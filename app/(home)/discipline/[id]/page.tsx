@@ -1,14 +1,12 @@
 "use client";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/Collapsible";
+} from "@/components/ui/collapsible";
+
 import { MinusIcon, PlusCircleIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
-import { ChevronsUpDown, Plus, PlusCircle, X } from "lucide-react";
-import Link from "next/link";
 
 import { useState } from "react";
 import { Table } from "../Table";

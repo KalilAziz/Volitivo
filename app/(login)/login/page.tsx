@@ -1,5 +1,5 @@
-import { Form } from "@/components/form";
-import Image from 'next/image';
+import { Form } from "@/app/(login)/_components/form";
+import Image from "next/image";
 import Link from "next/link";
 import logoImage from "@/public/logo.jpeg";
 
@@ -8,7 +8,7 @@ const Login = () => {
     <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/">
-        <Image
+          <Image
             className="mx-auto h-12 w-auto"
             src={logoImage}
             alt="Your Company"

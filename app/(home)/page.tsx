@@ -1,7 +1,8 @@
-import { Carousel } from "@/components/Carousel";
-import { CtaSections } from "@/components/CtaSections";
-import { GradList } from "@/components/GradLists";
-import { Stats } from "@/components/Stats";
+import { Carousel } from "@/app/(home)/_components/Carousel";
+
+import { Stats } from "@/app/(home)/_components/Stats";
+import { CtaSections } from "./_components/CtaSections";
+import { GradList } from "./_components/GradLists";
 
 const Home = () => {
   return (

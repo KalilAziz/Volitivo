@@ -5,7 +5,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/logo.jpeg";
+import Logo from "@/public/logo.jpeg";
 
 const navigation = [
   { name: "Início", href: "/" },

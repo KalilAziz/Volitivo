@@ -1,4 +1,4 @@
-import { Form } from "@/components/form";
+import { Form } from "@/app/(login)/_components/form";
 import Image from "next/image";
 import Link from "next/link";
 import logoImage from "@/public/logo.jpeg";

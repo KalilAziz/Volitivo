@@ -1,10 +1,14 @@
 import "@/styles/globals.css";
-import Toaster from "@/components/toaster";
+import type { Metadata } from "next";
 import { ReactNode } from "react";
-import { Header } from "@/components/Header";
 
 type RootLayoutProps = {
   children: ReactNode;
+};
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to Next.js",
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
