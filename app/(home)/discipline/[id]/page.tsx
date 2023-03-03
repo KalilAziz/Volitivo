@@ -1,63 +1,26 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 
-import { MinusIcon, PlusCircleIcon } from "@heroicons/react/24/outline";
+import { data } from "@/data";
+import { CollapsibleItem } from './CollapsibleItem';
 
-import { useState } from "react";
-import { Table } from "../Table";
 
-const lists = [
-  {
-    discipline: "portugues 1",
-    questions: 1,
-    commented: 1,
-  },
-  {
-    discipline: "portugues 2",
-    questions: 2,
-    commented: 2,
-  },
-  {
-    discipline: "portugues 3",
-    questions: 3,
-    commented: 3,
-  },
-];
+type DisciplinePageProps = {
+  params: {
+    id: string;
+  };
+};
 
-const DisciplinePage = ({ params }: any) => {
-  const [isOpen, setIsOpen] = useState(true);
+const DisciplinePage = ({ params }: DisciplinePageProps) => {
+  const dataFind = data.find((item) => item.name === params.id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-3">
-      <h1 className="text-4xl text-center px-4 py-3">{params.id}</h1>
-      <Collapsible
-        open={isOpen}
-        onOpenChange={setIsOpen}
-        className="w-full space-y-2"
-        defaultOpen
-      >
-        <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold">1. Ortografia</h4>
-          <CollapsibleTrigger asChild>
-            <Button variant="ghost" size="sm" className="w-9 p-0">
-              {isOpen ? (
-                <MinusIcon className="h-8 w-8" />
-              ) : (
-                <PlusCircleIcon className="h-8 w-8" />
-              )}
-            </Button>
-          </CollapsibleTrigger>
-        </div>
-
-        <CollapsibleContent className="space-y-2">
-          <Table lists={lists} />
-        </CollapsibleContent>
-      </Collapsible>
+      <h1 className="text-4xl text-center px-4 py-3">{dataFind?.name}</h1>
+      {dataFind?.themes.map((item) => {
+        return (
+         <CollapsibleItem key={item.id} item={item} />
+        );
+      })}
     </div>
   );
 };

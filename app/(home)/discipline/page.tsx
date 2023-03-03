@@ -1,22 +1,5 @@
+import { data } from "@/data";
 import { Table } from "./Table";
-
-const lists = [
-  {
-    discipline: "portugues",
-    questions: 1,
-    commented: 1,
-  },
-  {
-    discipline: "matematica",
-    questions: 2,
-    commented: 2,
-  },
-  {
-    discipline: "quimica",
-    questions: 3,
-    commented: 3,
-  },
-];
 
 const Discipline = () => {
   return (
@@ -30,7 +13,7 @@ const Discipline = () => {
           </p>
         </div>
       </div>
-      <Table lists={lists} />
+      <Table lists={data} />
     </div>
   );
 };
